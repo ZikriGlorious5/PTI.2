@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  align-self: center;
+}
+.uika {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  margin-top: 20px;
+  justify-content: center;
+  transform: translateY(2vh);
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  img {
+    height: 50px;
+  }
+}
+
+.video-container {
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+
+  h2 {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    transform: translateY(100%);
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .caption {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    position: relative;
+    text-align: center;
+    top: 55%;
+    bottom: 55%;
+    align-items: center;
+    color: #f2f2f2;
+    opacity: 0.7;
+    font-family: "Istok Web", sans-serif;
+  }
+}
+.video-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.5);
+}
+/*  arrow */
+
+.container {
+  width: auto;
+  height: 94.4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner_con {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+.button {
+  z-index: 1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin-bottom: 15px;
+  bottom: 25vh;
+  text-align: center;
+  transform: scale(20vh);
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  a {
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #1c3b29;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  h1 {
+    top: -50vh;
+    position: relative;
+    z-index: 1;
+    transform: translateY(98.2vh);
+    animation: slidein 5s infinite;
+    -webkit-animation: slidein 5s infinite;
+    font-family: "Kanit", sans-serif;
+    font-weight: medium;
+    font-size: 20px;
+    color: #f2f2f2;
+  }
+}
+
+// .mouse {
+//   width: 25px;
+//   height: 48.5px;
+//   border: 3px solid #f2f2f2;
+//   border-radius: 10px;
+//   position: relative;
+//   z-index: 1;
+//   margin-left: 45px;
+//   margin-top: 20px;
+//   transform: translateY(390%);
+
+//   &::before {
+//     content: "";
+//     width: 3px;
+//     height: 7px;
+//     position: absolute;
+//     top: 5px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     background-color: #f2f2f2;
+//     border-radius: 50%;
+//     opacity: 1;
+//     animation: slidein 2.2s infinite;
+//     -webkit-animation: slidein 2.2s infinite;
+//   }
+// }
+
+@keyframes slidein {
+  0% {
+    // margin-left: -75vh;
+    opacity: 0;
+  }
+  50% {
+    // margin-left: 0%;
+    opacity: 1;
+    text-shadow: #f2f2f2 0 0 5px;
+  }
+  100% {
+    // margin-left: 150vh;
+    opacity: 0;
+  }
+}
+
+// Parallex
+
+.container-parrallax {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://i.ibb.co/hFGb20m/maxresdefault.jpg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-size: cover;
+
+  .list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      position: absolute;
+      z-index: 4;
+      list-style: none;
+      li {
+        font-family: "Kanit", sans-serif;
+        font-size: large;
+        font-weight: bolder;
+        padding: 5rem;
+        color: #f2f2f2;
+      }
+      a {
+        text-decoration: none;
+        color: #e4e4e4;
+      }
+    }
+  }
+}
+
+.container-parrallax::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container-parrallax1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://i.ibb.co/Dfg31bq/Universitas-Ibn-Khaldun-UIKA-Bogor.jpg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-size: cover;
+
+  .list-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      position: absolute;
+      z-index: 4;
+      list-style: none;
+      background-color: rgb(255, 255, 255);
+      padding: 20px 0px;
+      border-radius: 5px;
+      justify-content: center;
+      align-items: center;
+      width: 100vh;
+      li {
+        font-family: "Kanit", sans-serif;
+        font-size: large;
+        font-weight: bolder;
+        padding: 30px;
+        color: #202020;
+      }
+      a {
+        text-decoration: none;
+        color: #e4e4e4;
+      }
+    }
+  }
+}
+.back {
+  z-index: 5;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 10px;
+  height: 10px;
+  top: 208vh;
+  left: 50px;
+  opacity: 0.5;
+}
+.container-parrallax1::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+#left::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  height: 50px;
+  width: 2px;
+  right: 65%;
+  transform: translateY(-30%);
+}
+
+#right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  height: 50px;
+  width: 2px;
+  right: 35%;
+  transform: translateY(-30%);
+}
