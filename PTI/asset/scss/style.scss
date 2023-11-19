@@ -5,6 +5,7 @@
 }
 body {
   overflow: hidden;
+  background-color: black;
 }
 html {
   scroll-behavior: smooth;
@@ -236,6 +237,7 @@ header {
   justify-content: center;
   justify-items: center;
   background-size: cover;
+  transform: translate(200vh, -100vh);
 
   .list-container1 {
     display: flex;
@@ -247,13 +249,13 @@ header {
       position: absolute;
       z-index: 4;
       list-style: none;
-      background-color: rgb(255, 255, 255);
-      padding: 20px 0px;
-      border-radius: 5px;
       justify-content: center;
       align-items: center;
-      width: 100vh;
       li {
+        border-radius: 5px;
+        width: 100vh;
+        background-color: rgb(255, 255, 255);
+        padding: 20px 0px;
         font-family: "Kanit", sans-serif;
         font-size: large;
         font-weight: bolder;
@@ -268,14 +270,15 @@ header {
   }
 }
 .back {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
-  transform: rotate(-90deg);
-  width: 10px;
-  height: 10px;
-  top: 208vh;
-  left: 50px;
   opacity: 0.5;
+  // transform: translate(-80px, -40px);
+  filter: invert(100%);
+  img {
+    height: 50px;
+    width: 50px;
+  }
 }
 .container-parrallax1::before {
   content: "";
