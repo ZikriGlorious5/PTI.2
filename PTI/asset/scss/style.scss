@@ -258,9 +258,7 @@ header {
   .list-container1 {
     display: flex;
     justify-content: center;
-
     align-items: center;
-
     ul {
       display: flex;
       position: absolute;
@@ -279,10 +277,6 @@ header {
         padding: 25.2px;
         color: #202020;
       }
-      a {
-        text-decoration: none;
-        color: #e4e4e4;
-      }
     }
   }
 }
@@ -299,8 +293,8 @@ header {
 .back {
   z-index: 20;
   position: absolute;
-  right: 22%;
-  top: 27%;
+  right: 15%;
+  top: 18%;
   background-color: white;
   border-radius: 50px;
   padding: 10px;
@@ -320,7 +314,7 @@ header {
 .container-parrallax2 {
   height: 100vh;
   width: 100%;
-  background-image: url("https://i.ibb.co/Dfg31bq/Universitas-Ibn-Khaldun-UIKA-Bogor.jpg");
+  background-image: url("https://i.ibb.co/jyNCLqb/3783335385.png");
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -332,7 +326,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    h1 {
+      display: flex;
+      position: absolute;
+      z-index: 5;
+      justify-content: center;
+      align-items: center;
+      top: 18%;
+      background-color: #1c3b29;
+      color: #f2f2f2;
+      border-radius: 10px;
+      padding: 10px;
+    }
     ul {
       display: flex;
       position: absolute;
@@ -342,27 +347,37 @@ header {
       align-items: center;
       li {
         border-radius: 5px;
-        width: 100vh;
+        width: 35vh;
+        margin-right: 20px;
         background-color: rgb(255, 255, 255);
         padding: 20px 0px;
         font-family: "Kanit", sans-serif;
         font-size: large;
         font-weight: bolder;
-        padding: 30px;
+        padding: 20px;
         color: #202020;
-      }
-      a {
-        text-decoration: none;
-        color: #1c3b29;
+        overflow: auto;
       }
     }
   }
 }
+.diploma {
+  height: 50vh;
+}
+.sarjana {
+  height: 50vh;
+}
+.pascasarjana {
+  height: 50vh;
+}
+.doktor {
+  height: 50vh;
+}
 .back2 {
   z-index: 20;
   position: absolute;
-  right: 22%;
-  top: 28%;
+  right: 11%;
+  top: 20%;
   background-color: white;
   border-radius: 50px;
   padding: 10px;
@@ -371,6 +386,48 @@ header {
   color: #000000;
 }
 .container-parrallax2::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.container-parrallax3 {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://i.ibb.co/k4GqxpJ/update-prof-may-2.png");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-size: cover;
+  transform: translate(0vh, -100vh);
+
+  .list-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      position: absolute;
+      z-index: 4;
+      list-style: none;
+      li {
+        font-family: "Kanit", sans-serif;
+        font-size: large;
+        font-weight: bolder;
+        padding: 5rem;
+        color: #f2f2f2;
+      }
+    }
+  }
+}
+
+.container-parrallax3::before {
   content: "";
   width: 100%;
   height: 100vh;
@@ -400,4 +457,66 @@ header {
   width: 2px;
   right: 35%;
   transform: translateY(-30%);
+}
+
+@media screen and (max-width: 1500px) and (min-width: 800px) {
+  .container-parrallax1 {
+    .list-container1 {
+      display: flex;
+      ul {
+        flex-direction: column;
+        li {
+          margin-right: 0;
+          margin-bottom: 10px;
+          border-radius: 15px;
+          width: 60vh;
+          padding: 15px;
+          font-size: medium;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  .visi {
+    height: 25.5vh;
+  }
+  .misi {
+    height: 25.5vh;
+  }
+  .tujuan {
+    height: 25.5vh;
+  }
+  .back {
+    right: 21%;
+    top: 11%;
+  }
+  .container-parrallax2 {
+    .list-container2 {
+      display: flex;
+      ul {
+        flex-direction: column;
+        li {
+          margin-right: 0;
+          margin-bottom: 10px;
+          border-radius: 15px;
+          width: 60vh;
+          padding: 15px;
+          font-size: medium;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  .diploma {
+    height: 12vh;
+  }
+  .sarjana {
+    height: 12vh;
+  }
+  .pascasarjana {
+    height: 12vh;
+  }
+  .doktor {
+    height: 12vh;
+  }
 }
