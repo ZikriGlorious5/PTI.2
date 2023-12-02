@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  overflow: hidden;
   background-color: black;
+  overflow: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -208,6 +208,7 @@ header {
   justify-content: center;
   justify-items: center;
   background-size: cover;
+  background-position: center;
 
   .list-container {
     display: flex;
@@ -249,6 +250,7 @@ header {
   width: 100%;
   background-image: url("https://i.ibb.co/Dfg31bq/Universitas-Ibn-Khaldun-UIKA-Bogor.jpg");
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -276,6 +278,7 @@ header {
         font-weight: bolder;
         padding: 25.2px;
         color: #202020;
+        overflow: auto;
       }
     }
   }
@@ -316,6 +319,7 @@ header {
   width: 100%;
   background-image: url("https://i.ibb.co/jyNCLqb/3783335385.png");
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -400,6 +404,7 @@ header {
   width: 100%;
   background-image: url("https://i.ibb.co/k4GqxpJ/update-prof-may-2.png");
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -426,14 +431,28 @@ header {
     }
   }
 }
+.back3 {
+  z-index: 20;
+  position: absolute;
+  right: 11%;
+  top: 20%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  text-decoration: none;
+  font-family: zeniq;
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .container-parrallax3::before {
   content: "";
   width: 100%;
-  height: 100vh;
+  bottom: 0;
+  height: 8.5vh;
   display: block;
   position: absolute;
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 1);
   backdrop-filter: blur(5px);
 }
 
@@ -469,7 +488,7 @@ header {
           margin-right: 0;
           margin-bottom: 10px;
           border-radius: 15px;
-          width: 60vh;
+          width: 100vh;
           padding: 15px;
           font-size: medium;
           font-weight: bolder;
@@ -487,8 +506,8 @@ header {
     height: 25.5vh;
   }
   .back {
-    right: 21%;
-    top: 11%;
+    right: 12%;
+    top: 10%;
   }
   .container-parrallax2 {
     .list-container2 {
@@ -499,7 +518,7 @@ header {
           margin-right: 0;
           margin-bottom: 10px;
           border-radius: 15px;
-          width: 60vh;
+          width: 100vh;
           padding: 15px;
           font-size: medium;
           font-weight: bolder;
@@ -518,5 +537,43 @@ header {
   }
   .doktor {
     height: 12vh;
+  }
+}
+@media screen and (max-height: 800px) {
+  .button {
+    margin-bottom: 5px;
+    height: 0;
+  }
+  .field {
+    display: none;
+  }
+  .container-parrallax1 {
+    .list-container1 {
+      ul {
+        margin-top: 50px;
+        height: 70vh;
+        li {
+          width: 100vh;
+        }
+      }
+    }
+  }
+  .back {
+    right: 21%;
+    top: 20%;
+  }
+  .container-parrallax2 {
+    .list-container2 {
+      h1 {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      ul {
+        margin-top: 50px;
+        li {
+          width: 100vh;
+        }
+      }
+    }
   }
 }
